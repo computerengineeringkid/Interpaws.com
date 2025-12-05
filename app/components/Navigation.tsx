@@ -16,10 +16,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#innovation", label: "Innovation Claim" },
-    { href: "#architecture", label: "System Architecture" },
-    { href: "#prototype", label: "Live Prototype" },
-    { href: "#tech-stack", label: "Tech Stack" },
+    { href: "#", label: "Home" },
+    { href: "#innovation", label: "Innovation" },
+    { href: "#architecture", label: "Architecture" },
+    { href: "#deep-dive", label: "Tech Stack" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (

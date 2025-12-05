@@ -202,7 +202,7 @@ export default function Hero() {
               </div>
 
               {/* Floating vector similarity card */}
-              <div className="absolute -bottom-6 -left-6 animate-float-delayed rounded-xl border border-slate-200/50 bg-white/90 backdrop-blur-xl p-4 shadow-lg dark:border-slate-700/50 dark:bg-slate-800/90">
+              <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 animate-float-delayed rounded-xl border border-slate-200/50 bg-white/90 backdrop-blur-xl p-4 shadow-lg dark:border-slate-700/50 dark:bg-slate-800/90">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-primary-500 to-primary-600 animate-pulse-glow">
                     <Database className="h-5 w-5 text-white" />

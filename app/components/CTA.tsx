@@ -2,7 +2,7 @@ import { FileText, Play, Layers } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="prototype" className="relative bg-white py-24 dark:bg-slate-900">
+    <section id="deep-dive" className="relative bg-white py-24 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-primary-600 via-primary-500 to-primary-700 px-6 py-16 shadow-2xl sm:px-12 lg:px-16 lg:py-20">
           {/* Background decorations */}

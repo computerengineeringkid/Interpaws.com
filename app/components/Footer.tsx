@@ -18,9 +18,11 @@ export default function Footer() {
       { label: "pgvector", href: "https://github.com/pgvector/pgvector", icon: <ExternalLink className="h-3 w-3" /> },
     ],
     "Quick Links": [
-      { label: "Innovation Claim", href: "#innovation", icon: null },
+      { label: "Home", href: "#", icon: null },
+      { label: "Innovation", href: "#innovation", icon: null },
       { label: "Architecture", href: "#architecture", icon: null },
-      { label: "Live Prototype", href: "#prototype", icon: null },
+      { label: "Tech Stack", href: "#deep-dive", icon: null },
+      { label: "Contact", href: "#contact", icon: null },
     ],
   };
 
