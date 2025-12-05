@@ -46,7 +46,14 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
                   Demo Request Form
                 </h2>
-                <form className="space-y-6">
+                <form 
+                  name="demo-request" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-recaptcha="true"
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="demo-request" />
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -147,6 +154,8 @@ export default function ContactPage() {
                       placeholder="Tell us about your practice or any questions you have..."
                     />
                   </div>
+
+                  <div data-netlify-recaptcha="true"></div>
 
                   <button
                     type="submit"
