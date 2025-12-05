@@ -1,8 +1,8 @@
-import { Github, FileText, ExternalLink, Play } from "lucide-react";
+import { FileText, Play, Layers } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="prototype" className="relative bg-white py-24 dark:bg-slate-900">
+    <section id="deep-dive" className="relative bg-white py-24 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-primary-600 via-primary-500 to-primary-700 px-6 py-16 shadow-2xl sm:px-12 lg:px-16 lg:py-20">
           {/* Background decorations */}
@@ -25,35 +25,32 @@ export default function CTA() {
           <div className="relative mx-auto max-w-4xl text-center">
             {/* Icon */}
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
-              <Github className="h-8 w-8 text-white" />
+              <Layers className="h-8 w-8 text-white" />
             </div>
 
             {/* Heading */}
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Explore the Codebase
+              Technical Deep Dive
             </h2>
             <p className="mt-6 text-lg leading-8 text-primary-100 max-w-2xl mx-auto">
-              This project demonstrates a complete full-stack AI application. Review the architecture,
-              examine the ReAct agent implementation, and explore the vector search integration.
+              This project demonstrates a complete full-stack AI application with vector embeddings,
+              ReAct agent architecture, and local LLM inference for veterinary practice management.
             </p>
 
             {/* Action buttons */}
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
-                href="https://github.com/your-username/interpaws"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#innovation"
                 className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-white px-8 py-4 text-base font-semibold text-primary-600 shadow-lg transition-all hover:bg-primary-50 hover:shadow-xl sm:w-auto"
               >
-                <Github className="h-5 w-5" />
-                <span>View on GitHub</span>
-                <ExternalLink className="h-4 w-4 opacity-50 transition-transform group-hover:translate-x-0.5" />
+                <FileText className="h-5 w-5" />
+                <span>Innovation Claims</span>
               </a>
               <a
                 href="#architecture"
                 className="group flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/50 sm:w-auto"
               >
-                <FileText className="h-5 w-5" />
+                <Play className="h-5 w-5" />
                 <span>View Architecture</span>
               </a>
             </div>
@@ -64,7 +61,7 @@ export default function CTA() {
                 {
                   icon: <Play className="h-5 w-5" />,
                   title: "ReAct Agent",
-                  description: "Full agent loop implementation",
+                  description: "Reason + Act loop",
                 },
                 {
                   icon: (
@@ -81,17 +78,17 @@ export default function CTA() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                   ),
-                  title: "Full-Stack Code",
+                  title: "Full-Stack",
                   description: "Next.js + FastAPI",
                 },
                 {
                   icon: (
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                   ),
-                  title: "Documentation",
-                  description: "Setup & API guides",
+                  title: "Local LLM",
+                  description: "Ollama inference",
                 },
               ].map((feature) => (
                 <div
@@ -110,9 +107,9 @@ export default function CTA() {
             {/* Note */}
             <div className="mt-10 rounded-xl bg-white/10 backdrop-blur-sm p-4">
               <p className="text-sm text-primary-100">
-                <span className="font-semibold text-white">Note:</span>{" "}
-                This showcase site demonstrates the project's technical concepts. The full working prototype
-                requires local setup with Ollama, PostgreSQL, and the FastAPI backend.
+                <span className="font-semibold text-white">About this showcase:</span>{" "}
+                This site demonstrates the project&apos;s technical concepts and architecture.
+                The full system includes local Ollama inference, PostgreSQL with pgvector, and a FastAPI backend.
               </p>
             </div>
           </div>

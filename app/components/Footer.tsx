@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, FileText, Database, Code2, ExternalLink } from "lucide-react";
+import { Linkedin, Mail, FileText, Database, Code2, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const footerLinks = {
@@ -18,18 +18,15 @@ export default function Footer() {
       { label: "pgvector", href: "https://github.com/pgvector/pgvector", icon: <ExternalLink className="h-3 w-3" /> },
     ],
     "Quick Links": [
-      { label: "Innovation Claim", href: "#innovation", icon: null },
+      { label: "Home", href: "#", icon: null },
+      { label: "Innovation", href: "#innovation", icon: null },
       { label: "Architecture", href: "#architecture", icon: null },
-      { label: "Live Prototype", href: "#prototype", icon: null },
+      { label: "Tech Stack", href: "#deep-dive", icon: null },
+      { label: "Contact", href: "#contact", icon: null },
     ],
   };
 
   const socialLinks = [
-    {
-      label: "GitHub",
-      href: "https://github.com/your-username/interpaws",
-      icon: <Github className="h-5 w-5" />,
-    },
     {
       label: "LinkedIn",
       href: "#",
@@ -163,17 +160,6 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Interpaws - Student Innovation Project. Educational use only.
           </p>
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/your-username/interpaws"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors"
-            >
-              <Github className="h-4 w-4" />
-              <span>View on GitHub</span>
-            </a>
-          </div>
         </div>
 
         {/* Credit */}

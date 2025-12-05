@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Github } from "lucide-react";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,10 +16,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#innovation", label: "Innovation Claim" },
-    { href: "#architecture", label: "System Architecture" },
-    { href: "#prototype", label: "Live Prototype" },
-    { href: "#tech-stack", label: "Tech Stack" },
+    { href: "#", label: "Home" },
+    { href: "#innovation", label: "Innovation" },
+    { href: "#architecture", label: "Architecture" },
+    { href: "#deep-dive", label: "Tech Stack" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -67,19 +67,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden items-center md:flex">
-            <a
-              href="https://github.com/your-username/interpaws"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-500/30"
-            >
-              <Github className="h-4 w-4" />
-              <span>View Source Code</span>
-            </a>
-          </div>
-
+          
           {/* Mobile Menu Button */}
           <button
             className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 md:hidden dark:text-slate-300 dark:hover:bg-slate-800"
@@ -112,19 +100,7 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-slate-200/50 dark:border-slate-800/50">
-                <a
-                  href="https://github.com/your-username/interpaws"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg w-full"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Github className="h-4 w-4" />
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
+                          </div>
           </div>
         )}
       </div>
