@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Github } from "lucide-react";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,11 +17,10 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#features", label: "Features" },
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "/about", label: "About" },
+    { href: "#innovation", label: "Innovation Claim" },
+    { href: "#architecture", label: "System Architecture" },
+    { href: "#prototype", label: "Live Prototype" },
+    { href: "#tech-stack", label: "Tech Stack" },
   ];
 
   return (
@@ -35,24 +35,23 @@ export default function Navigation() {
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 shadow-lg">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary-500 to-primary-700 shadow-lg">
               <svg
                 className="h-6 w-6 text-white"
-                fill="none"
+                fill="currentColor"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
+                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6-1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zM6 8.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S7.38 8.5 6 8.5zM9 4C7.62 4 6.5 5.12 6.5 6.5S7.62 9 9 9s2.5-1.12 2.5-2.5S10.38 4 9 4zm6 0c-1.38 0-2.5 1.12-2.5 2.5S13.62 9 15 9s2.5-1.12 2.5-2.5S16.38 4 15 4zm-3 8c-2.21 0-4 1.79-4 4v2h8v-2c0-2.21-1.79-4-4-4z"/>
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900 dark:text-white">
-              Inter<span className="text-primary-600">paws</span>
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-slate-900 dark:text-white leading-tight">
+                Inter<span className="text-primary-600">paws</span>
+              </span>
+              <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                SIP Showcase
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,14 +67,17 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden items-center gap-4 md:flex">
-            <Link
-              href="/contact"
-              className="rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-500/30"
+          {/* CTA Button */}
+          <div className="hidden items-center md:flex">
+            <a
+              href="https://github.com/your-username/interpaws"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-500/30"
             >
-              Request a Demo
-            </Link>
+              <Github className="h-4 w-4" />
+              <span>View Source Code</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,13 +112,18 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                className="mt-2 rounded-full bg-primary-600 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-lg"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Request a Demo
-              </Link>
+              <div className="pt-4 border-t border-slate-200/50 dark:border-slate-800/50">
+                <a
+                  href="https://github.com/your-username/interpaws"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg w-full"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Github className="h-4 w-4" />
+                  <span>View Source Code</span>
+                </a>
+              </div>
             </div>
           </div>
         )}
