@@ -3,7 +3,7 @@ import { Database, Brain, Cpu, Network } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-linear-to-b from-primary-50 via-white to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+    <section className="relative min-h-dvh overflow-x-hidden bg-linear-to-b from-primary-50 via-white to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary-200/50 blur-3xl dark:bg-primary-900/30" />
@@ -106,7 +106,7 @@ export default function Hero() {
           </div>
 
           {/* Right content - Agent Reasoning Preview */}
-          <div className="relative lg:ml-8">
+          <div className="relative hidden lg:block lg:ml-8">
             <div className="relative animate-float">
               {/* Main dashboard card */}
               <div className="rounded-2xl border border-slate-200/50 bg-white/80 backdrop-blur-xl p-4 shadow-2xl shadow-slate-200/50 dark:border-slate-700/50 dark:bg-slate-800/80 dark:shadow-slate-900/50">
