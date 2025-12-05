@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { Database, Brain, Cpu, Network } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-primary-50 via-white to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+    <section className="relative min-h-screen overflow-hidden bg-linear-to-b from-primary-50 via-white to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary-200/50 blur-3xl dark:bg-primary-900/30" />
@@ -11,80 +12,66 @@ export default function Hero() {
       </div>
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-size-[14px_24px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 lg:items-center">
           {/* Left content */}
           <div className="max-w-2xl">
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 dark:border-primary-800 dark:bg-primary-900/50">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50/80 backdrop-blur-sm px-4 py-1.5 dark:border-primary-800 dark:bg-primary-900/50">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-500 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-600"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-600"></span>
               </span>
               <span className="text-sm font-medium text-primary-700 dark:text-primary-300">
-                AI-Powered Practice Management
+                Student Innovation Project 2025
               </span>
             </div>
 
             {/* Heading */}
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-              Meet{" "}
-              <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
                 Interpaws
               </span>
+              :{" "}
+              <span className="block mt-2">Agentic AI for Veterinary Practice Management</span>
             </h1>
 
             {/* Subheading */}
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              Interpaws is an all-in-one practice management system with AI at its core.
-              From intelligent staff matching to conversational booking, we handle the
-              complexity so you can focus on what matters — caring for animals.
+              A Student Innovation Project exploring the application of{" "}
+              <span className="font-semibold text-primary-600 dark:text-primary-400">Vector Embeddings</span> and{" "}
+              <span className="font-semibold text-primary-600 dark:text-primary-400">ReAct Agents</span> to solve
+              healthcare scheduling bottlenecks in veterinary practice management.
             </p>
 
-            {/* Key Features */}
+            {/* Technical Highlights */}
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 {
-                  icon: (
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  ),
-                  title: "AI Staff Matching",
-                  desc: "Pet complaints matched to staff with the right expertise using semantic AI",
+                  icon: <Database className="h-5 w-5" />,
+                  title: "pgvector + Embeddings",
+                  desc: "384-dimensional semantic search for staff-patient matching",
                 },
                 {
-                  icon: (
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  ),
-                  title: "Conversational Booking",
-                  desc: "Pet owners describe concerns naturally. Our AI handles the rest",
+                  icon: <Brain className="h-5 w-5" />,
+                  title: "ReAct Agent Loop",
+                  desc: "Autonomous reasoning and action execution cycles",
                 },
                 {
-                  icon: (
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  ),
-                  title: "Automated Wellness Outreach",
-                  desc: "Identify overdue pets and send personalized outreach automatically",
+                  icon: <Cpu className="h-5 w-5" />,
+                  title: "Local LLM Inference",
+                  desc: "Ollama-powered Llama 3 / Qwen for on-premise AI",
                 },
                 {
-                  icon: (
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                  ),
-                  title: "Complete Practice Management",
-                  desc: "Staff, bookings, surgeries, and medications — all in one place",
+                  icon: <Network className="h-5 w-5" />,
+                  title: "Full-Stack Architecture",
+                  desc: "Next.js 15 + FastAPI + PostgreSQL stack",
                 },
               ].map((feature) => (
                 <div key={feature.title} className="flex items-start gap-3">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/50 dark:text-primary-400">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary-100/80 backdrop-blur-sm text-primary-600 dark:bg-primary-900/50 dark:text-primary-400">
                     {feature.icon}
                   </div>
                   <div>
@@ -97,32 +84,34 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact"
+              <a
+                href="https://github.com/your-username/interpaws"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5"
               >
-                Start Free Trial
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
-              </Link>
+                View Source Code
+              </a>
               <Link
-                href="#how-it-works"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-700 transition-all hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                href="#innovation"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/80 backdrop-blur-sm px-8 py-4 text-base font-semibold text-slate-700 transition-all hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200 dark:hover:bg-slate-700"
               >
-                <svg className="h-5 w-5 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
+                <svg className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                See How It Works
+                Read Abstract
               </Link>
             </div>
           </div>
 
-          {/* Right content - Conversational Booking Preview */}
+          {/* Right content - Agent Reasoning Preview */}
           <div className="relative lg:ml-8">
             <div className="relative animate-float">
               {/* Main dashboard card */}
-              <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/50 dark:border-slate-700 dark:bg-slate-800 dark:shadow-slate-900/50">
+              <div className="rounded-2xl border border-slate-200/50 bg-white/80 backdrop-blur-xl p-4 shadow-2xl shadow-slate-200/50 dark:border-slate-700/50 dark:bg-slate-800/80 dark:shadow-slate-900/50">
                 {/* Browser chrome */}
                 <div className="mb-4 flex items-center gap-2">
                   <div className="flex gap-1.5">
@@ -130,98 +119,128 @@ export default function Hero() {
                     <div className="h-3 w-3 rounded-full bg-amber-400" />
                     <div className="h-3 w-3 rounded-full bg-green-400" />
                   </div>
-                  <div className="ml-4 flex-1 rounded-md bg-slate-100 px-3 py-1.5 dark:bg-slate-700">
-                    <span className="text-xs text-slate-500 dark:text-slate-400">app.interpaws.com</span>
+                  <div className="ml-4 flex-1 rounded-md bg-slate-100/80 backdrop-blur-sm px-3 py-1.5 dark:bg-slate-700/80">
+                    <span className="text-xs text-slate-500 dark:text-slate-400">interpaws.ai/agent-console</span>
                   </div>
                 </div>
 
-                {/* Conversational booking preview */}
-                <div className="space-y-4">
-                  {/* Chat header */}
-                  <div className="flex items-center gap-3 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 p-4 text-white">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
-                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
+                {/* Agent Reasoning Preview */}
+                <div className="space-y-3">
+                  {/* Agent header */}
+                  <div className="flex items-center gap-3 rounded-lg bg-linear-to-r from-primary-500 to-primary-600 p-3 text-white">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                      <Brain className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-semibold">Interpaws Booking Assistant</p>
-                      <p className="text-sm text-primary-100">AI-powered scheduling</p>
+                      <p className="font-semibold">ReAct Agent Console</p>
+                      <p className="text-sm text-primary-100">Live reasoning trace</p>
                     </div>
                   </div>
 
-                  {/* Chat messages */}
-                  <div className="space-y-3">
-                    <div className="flex justify-end">
-                      <div className="max-w-[80%] rounded-2xl rounded-br-md bg-primary-500 px-4 py-2 text-sm text-white">
-                        My dog has been limping after a fall yesterday
-                      </div>
-                    </div>
-                    <div className="flex">
-                      <div className="max-w-[80%] rounded-2xl rounded-bl-md bg-slate-100 px-4 py-2 text-sm text-slate-700 dark:bg-slate-700 dark:text-slate-200">
-                        I understand - that sounds concerning. I'll match you with Dr. Sarah Chen, our orthopedic specialist. She has availability tomorrow at 10:30 AM or 2:00 PM.
-                      </div>
-                    </div>
-                    <div className="flex justify-end">
-                      <div className="max-w-[80%] rounded-2xl rounded-br-md bg-primary-500 px-4 py-2 text-sm text-white">
-                        10:30 works great!
-                      </div>
+                  {/* User input */}
+                  <div className="flex justify-end">
+                    <div className="max-w-[85%] rounded-2xl rounded-br-md bg-slate-100 px-4 py-2 text-sm text-slate-700 dark:bg-slate-700 dark:text-slate-200">
+                      My dog has been limping after a fall yesterday
                     </div>
                   </div>
 
-                  {/* Confirmation */}
-                  <div className="rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-900/30">
-                    <div className="flex items-center gap-2">
-                      <svg className="h-5 w-5 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {/* Agent reasoning steps */}
+                  <div className="space-y-2 rounded-lg border border-primary-200/50 bg-primary-50/50 backdrop-blur-sm p-3 dark:border-primary-800/50 dark:bg-primary-900/30">
+                    <div className="flex items-start gap-2">
+                      <span className="rounded bg-amber-100 px-1.5 py-0.5 text-xs font-mono font-semibold text-amber-700 dark:bg-amber-900/50 dark:text-amber-300">
+                        THOUGHT
+                      </span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">
+                        Analyzing symptoms: limping + fall history suggests orthopedic concern. Need to query staff vector store for expertise match.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-mono font-semibold text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+                        ACTION
+                      </span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400 font-mono">
+                        query_staff_vector(embedding=&quot;orthopedic trauma limping&quot;, k=3)
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="rounded bg-green-100 px-1.5 py-0.5 text-xs font-mono font-semibold text-green-700 dark:bg-green-900/50 dark:text-green-300">
+                        RESULT
+                      </span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">
+                        Top match: Dr. Sarah Chen (cosine_similarity: 0.94) - Orthopedic Surgery
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="rounded bg-amber-100 px-1.5 py-0.5 text-xs font-mono font-semibold text-amber-700 dark:bg-amber-900/50 dark:text-amber-300">
+                        THOUGHT
+                      </span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">
+                        High confidence match found. Now checking calendar availability for Dr. Chen...
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-mono font-semibold text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+                        ACTION
+                      </span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400 font-mono">
+                        check_availability(staff_id=12, date_range=&quot;next_48h&quot;)
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Final response */}
+                  <div className="rounded-lg border border-green-200/50 bg-green-50/80 backdrop-blur-sm p-3 dark:border-green-800/50 dark:bg-green-900/30">
+                    <div className="flex items-center gap-2 mb-2">
+                      <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-sm font-medium text-green-700 dark:text-green-300">Appointment confirmed with Dr. Chen</span>
+                      <span className="text-xs font-semibold text-green-700 dark:text-green-300">AGENT RESPONSE</span>
                     </div>
-                    <p className="mt-1 text-xs text-green-600 dark:text-green-400">Tomorrow at 10:30 AM • Orthopedic Exam</p>
+                    <p className="text-sm text-green-800 dark:text-green-200">
+                      I've matched you with Dr. Sarah Chen, our orthopedic specialist. She has slots at 10:30 AM or 2:00 PM tomorrow.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Floating AI matching card */}
-              <div className="absolute -bottom-6 -left-6 animate-float-delayed rounded-xl border border-slate-200 bg-white p-4 shadow-lg dark:border-slate-700 dark:bg-slate-800">
+              {/* Floating vector similarity card */}
+              <div className="absolute -bottom-6 -left-6 animate-float-delayed rounded-xl border border-slate-200/50 bg-white/90 backdrop-blur-xl p-4 shadow-lg dark:border-slate-700/50 dark:bg-slate-800/90">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 animate-pulse-glow">
-                    <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-primary-500 to-primary-600 animate-pulse-glow">
+                    <Database className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-900 dark:text-white">AI Match Found</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Orthopedic specialist • 98% match</p>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white">Vector Match</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">384-dim • cosine: 0.94</p>
                   </div>
                 </div>
               </div>
 
-              {/* Floating stats */}
-              <div className="absolute -top-4 -right-4 rounded-lg border border-primary-200 bg-primary-50 px-3 py-2 shadow-lg dark:border-primary-800 dark:bg-primary-900/50">
+              {/* Floating LLM stats */}
+              <div className="absolute -top-4 -right-4 rounded-lg border border-primary-200/50 bg-primary-50/90 backdrop-blur-xl px-3 py-2 shadow-lg dark:border-primary-800/50 dark:bg-primary-900/80">
                 <div className="text-center">
-                  <span className="text-lg font-bold text-primary-700 dark:text-primary-300">3 sec</span>
-                  <p className="text-xs text-primary-600 dark:text-primary-400">Avg booking time</p>
+                  <span className="text-lg font-bold text-primary-700 dark:text-primary-300">Llama 3</span>
+                  <p className="text-xs text-primary-600 dark:text-primary-400">8B params • local</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-20 border-t border-slate-200 pt-12 dark:border-slate-800">
+        {/* Technical metrics */}
+        <div className="mt-20 border-t border-slate-200/50 pt-12 dark:border-slate-800/50">
           <p className="text-center text-sm font-medium text-slate-500 dark:text-slate-400 mb-8">
-            What Veterinary Practices Are Saying
+            Project Technical Specifications
           </p>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[
-              { value: "10,000+", label: "Appointments Booked" },
-              { value: "85%", label: "Faster Booking" },
-              { value: "98%", label: "Matching Accuracy" },
-              { value: "4.9/5", label: "Practice Rating" },
+              { value: "384", label: "Embedding Dimensions" },
+              { value: "<200ms", label: "Vector Query Latency" },
+              { value: "ReAct", label: "Agent Architecture" },
+              { value: "100%", label: "Local Inference" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
+                <p className="text-3xl font-bold bg-linear-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">{stat.value}</p>
                 <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{stat.label}</p>
               </div>
             ))}
