@@ -60,12 +60,17 @@ export default function Contact() {
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-recaptcha="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-6"
             >
-              {/* Hidden field for Netlify */}
+              {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don&apos;t fill this out: <input name="bot-field" />
+                </label>
+              </p>
 
               {/* Name field */}
               <div>
@@ -136,9 +141,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Netlify reCAPTCHA */}
-              <div data-netlify-recaptcha="true"></div>
-
               {/* Submit button */}
               <button
                 type="submit"
@@ -150,7 +152,7 @@ export default function Contact() {
 
               {/* Note */}
               <p className="text-center text-xs text-slate-500 dark:text-slate-400">
-                This form is protected by reCAPTCHA. Your information will only be used to respond to your inquiry.
+                Your information will only be used to respond to your inquiry.
               </p>
             </form>
           )}
