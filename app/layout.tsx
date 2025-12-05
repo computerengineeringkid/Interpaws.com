@@ -13,13 +13,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Interpaws | AI-Powered Veterinary Practice Management",
-  description: "Transform your veterinary practice with Interpaws - the intelligent practice management system that leverages AI to streamline operations, enhance patient care, and grow your business.",
-  keywords: ["veterinary software", "practice management", "AI veterinary", "pet clinic software", "animal hospital management"],
-  authors: [{ name: "Saguaro Interactive" }],
+  title: "Interpaws | Student Innovation Project 2025",
+  description: "A Student Innovation Project exploring Agentic AI, Vector Embeddings, and ReAct Agents for veterinary practice management. Built with Next.js 15, FastAPI, pgvector, and Ollama.",
+  keywords: ["student innovation project", "agentic AI", "vector embeddings", "ReAct agents", "veterinary AI", "pgvector", "ollama"],
+  authors: [{ name: "Amari Bullard" }],
   openGraph: {
-    title: "Interpaws | AI-Powered Veterinary Practice Management",
-    description: "Transform your veterinary practice with intelligent AI-powered management.",
+    title: "Interpaws | Student Innovation Project 2025",
+    description: "Exploring Agentic AI and Vector Embeddings for veterinary practice management.",
     type: "website",
   },
 };
@@ -30,9 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>
