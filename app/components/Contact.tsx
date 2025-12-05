@@ -38,11 +38,17 @@ function ContactForm() {
       method="POST"
       action="/?success=true#contact"
       data-netlify="true"
-      data-netlify-recaptcha="true"
+      data-netlify-honeypot="bot-field"
       className="space-y-6"
     >
-      {/* Hidden field for Netlify */}
+      {/* Hidden fields for Netlify */}
       <input type="hidden" name="form-name" value="contact" />
+      {/* Honeypot field - hidden from humans, bots will fill it */}
+      <p className="hidden">
+        <label>
+          Don&apos;t fill this out: <input name="bot-field" />
+        </label>
+      </p>
 
       {/* Name field */}
       <div>
@@ -113,9 +119,6 @@ function ContactForm() {
         />
       </div>
 
-      {/* Netlify reCAPTCHA */}
-      <div data-netlify-recaptcha="true"></div>
-
       {/* Submit button */}
       <button
         type="submit"
@@ -127,7 +130,7 @@ function ContactForm() {
 
       {/* Note */}
       <p className="text-center text-xs text-slate-500 dark:text-slate-400">
-        This form is protected by reCAPTCHA. Your information will only be used to respond to your inquiry.
+        Your information will only be used to respond to your inquiry.
       </p>
     </form>
   );
